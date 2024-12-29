@@ -7,7 +7,7 @@ class TeacherGroup(Base):
     __tablename__ = "teacher_group"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    group_id = Column(Integer, ForeignKey("group.id"), nullable=False)
+    group_id = Column(Integer, ForeignKey("groups.id"), nullable=False)
     teacher_id = Column(Integer, ForeignKey("teachers.id"), nullable=False)
 
     def __repr__(self) -> str:

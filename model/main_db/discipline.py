@@ -4,7 +4,7 @@ from database.main_db.database import Base
 
 
 class Discipline(Base):
-    __tablename__ = "discipline"
+    __tablename__ = "disciplines"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     full_name = Column(String, nullable=False)
@@ -13,7 +13,7 @@ class Discipline(Base):
     path_to_answer = Column(String, nullable=False)
     language = Column(String, nullable=False)
     max_tasks = Column(Integer, nullable=False)
-    max_home_work = Column(Integer, nullable=False)
+    max_home_works = Column(Integer, nullable=False)
     works = Column(JSON, nullable=False)
 
     def __repr__(self) -> str:
